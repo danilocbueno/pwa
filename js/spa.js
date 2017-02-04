@@ -1,5 +1,3 @@
-/*navigator.serviceWorker.register('sw.js');*/
-
 document.onclick = function(e) {
 	var element = e.target;
 
@@ -18,6 +16,9 @@ $(document).ready(function() {
 	$('.modal').modal();
 });
 
+
+navigator.serviceWorker.register('sw.js');
+
 $('body').on('submit', 'form', function(){
 	//notification do materialize
 	Materialize.toast('Toast!!', 4000);
@@ -35,16 +36,16 @@ $('body').on('submit', 'form', function(){
 
 	if ('Notification' in window) {
 	Notification.requestPermission();
-/*
-	if ('showNotification' in ServiceWorkerRegistration.prototype) {
-	  console.log('Notification SW');
-	  navigator.serviceWorker.ready.then(function(registration){
-	    registration.showNotification(title, options);
-	  });
-	} else {*/
-	  console.log('Notification classic');
-	  new Notification(title, options);
-	/*}*/
+
+		if ('showNotification' in ServiceWorkerRegistration.prototype) {
+		  console.log('Notification SW');
+		  navigator.serviceWorker.ready.then(function(registration){
+		    registration.showNotification(title, options);
+		  });
+		} else {
+		  console.log('Notification classic');
+		  new Notification(title, options);
+		}
 	}
 
 	return false;
