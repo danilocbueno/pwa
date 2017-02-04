@@ -1,0 +1,25 @@
+CACHE MANIFEST
+
+CACHE:
+./app.html
+./lojas.html
+./extra.html
+./css/main.css
+./css/materialize.css
+./js/jquery-2.1.1.min.js
+./js/materialize.min.js
+./js/barcode.js
+./js/quagga.min.js
+./js/spa.js
+./fonts/roboto/Roboto-Regular.ttf
+./fonts/roboto/Roboto-Light.ttf
+./icons/MaterialIcons-Regular.ttf
+./img/destaque-promocao.jpg
+./img/destaque-shopping-itape.jpg
+./img/icon.png
+./img/lojas/extra-localizacao.png
+./img/lojas/extra-logo.png
+./manifest.json
+./sw.js
+
+#atualizacao
