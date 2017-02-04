@@ -1,4 +1,4 @@
-navigator.serviceWorker.register('sw.js');
+/*navigator.serviceWorker.register('sw.js');*/
 
 document.onclick = function(e) {
 	var element = e.target;
@@ -35,16 +35,16 @@ $('body').on('submit', 'form', function(){
 
 	if ('Notification' in window) {
 	Notification.requestPermission();
-
+/*
 	if ('showNotification' in ServiceWorkerRegistration.prototype) {
 	  console.log('Notification SW');
 	  navigator.serviceWorker.ready.then(function(registration){
 	    registration.showNotification(title, options);
 	  });
-	} else {
+	} else {*/
 	  console.log('Notification classic');
 	  new Notification(title, options);
-	}
+	/*}*/
 	}
 
 	return false;
